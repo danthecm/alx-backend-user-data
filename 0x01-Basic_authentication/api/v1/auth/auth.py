@@ -18,8 +18,8 @@ class Auth:
                           else path for path in excluded_paths]
         special_paths = [path for path in excluded_paths if '*' in path]
         if len(special_paths) > 0:
-            for path in special_paths:
-                if path[:-1] in path:
+            for s_path in special_paths:
+                if s_path[:-1] in path:
                     return False
         if path in excluded_paths:
             return False
